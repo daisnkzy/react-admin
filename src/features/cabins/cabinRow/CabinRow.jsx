@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import { deleteCabins } from '../../../services/apiCarbins';
-import CabinForm from '../cabinForm/cabinForm';
+// import CabinForm from '../cabinForm/cabinForm';
 
 import './cabinRow.scss';
 
@@ -43,7 +43,7 @@ const CabinRow = ({ cabin }) => {
           </button>
         </div>
       </div>
-      {showForm && <CabinForm cabin={cabin} />}
+      {/* {showForm && <CabinForm cabin={cabin} />} */}
     </>
   );
 };
