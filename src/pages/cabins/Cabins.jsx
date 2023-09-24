@@ -15,7 +15,7 @@ const Cabins = () => {
         <button onClick={() => setShowForm(!showForm)}>
           {showForm ? '关闭' : '添加房间'}
         </button>
-        {showForm && <CabinForm />}
+        {/* {showForm && <CabinForm />} */}
       </div>
     </>
   );

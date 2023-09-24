@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import './cabinForm.scss';
-// import { createCabins, editCabins } from '../../../services/apiCarbins';
+import { createCabins, editCabins } from '../../../services/apiCarbins';
 
 const CabinForm = ({ cabin = {} }) => {
   const { id: editId, ...editValues } = cabin;
@@ -16,31 +16,31 @@ const CabinForm = ({ cabin = {} }) => {
   } = useForm({ defaultValues: isEdit ? editValues : {} });
 
   const queryClient = useQueryClient();
-  // const { isLoading: isCreating, mutate: createCabin } = useMutation({
-  //   mutationFn: createCabins,
-  //   onSuccess: () => {
-  //     console.log('创建成功');
-  //     queryClient.invalidateQueries({
-  //       queryKey: ['cabins'],
-  //     });
-  //     reset();
-  //   },
-  //   onError: (err) => {
-  //     console.log(err.message);
-  //   },
-  // });
-  // const { isLoading: isEditting, mutate: editCabin } = useMutation({
-  //   mutationFn: ({ newCabin, id }) => editCabins(newCabin, id),
-  //   onSuccess: () => {
-  //     console.log('更新成功！');
-  //     queryClient.invalidateQueries({
-  //       queryKey: ['cabins'],
-  //     });
-  //   },
-  //   onError: (err) => {
-  //     console.log(err.message);
-  //   },
-  // });
+  const { isLoading: isCreating, mutate: createCabin } = useMutation({
+    mutationFn: createCabins,
+    onSuccess: () => {
+      console.log('创建成功');
+      queryClient.invalidateQueries({
+        queryKey: ['cabins'],
+      });
+      reset();
+    },
+    onError: (err) => {
+      console.log(err.message);
+    },
+  });
+  const { isLoading: isEditting, mutate: editCabin } = useMutation({
+    mutationFn: ({ newCabin, id }) => editCabins(newCabin, id),
+    onSuccess: () => {
+      console.log('更新成功！');
+      queryClient.invalidateQueries({
+        queryKey: ['cabins'],
+      });
+    },
+    onError: (err) => {
+      console.log(err.message);
+    },
+  });
 
   const onSubmit = (data) => {
     if (isEdit)
