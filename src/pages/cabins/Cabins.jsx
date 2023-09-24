@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import CabinForm from '../../features/cabins/cabinForm/cabinForm';
+// import CabinForm from '../../features/cabins/cabinForm/cabinForm';
 import CabinTable from '../../features/cabins/cabinTable/CabinTable';
 
 const Cabins = () => {
