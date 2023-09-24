@@ -1,0 +1,32 @@
+.table-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1.1fr 2fr 1fr 1fr 1.2fr;
+  column-gap: 2.4rem;
+  align-items: center;
+  justify-items: center;
+  padding: 1.4rem 2.4rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--color-grey-100);
+  }
+  .cabin-img {
+    display: block;
+    width: 6.4rem;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.5) translateX(-7px);
+  }
+  .cabin-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-grey-600);
+  }
+  .cabin-price {
+    font-weight: 600;
+  }
+  .cabin-discount {
+    font-weight: 500;
+    color: var(--color-green-700);
+  }
+}

@@ -1,0 +1,11 @@
+.header {
+  padding: 1.2rem 2.4rem;
+  font-size: larger;
+  font-weight: bold;
+  border-bottom: 1px solid var(--color-grey-100);
+  background-color: var(--color-grey-0);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1.2rem;
+}

@@ -1,0 +1,28 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2.4rem;
+  height: 88%;
+  width: 100%;
+  overflow: hidden;
+  .chart-pie {
+    background-color: var(--color-grey-0);
+    border: 1px solid var(--color-grey-100);
+    border-radius: var(--border-radius-md);
+    grid-column: 3/-1;
+    grid-row: 1/-2;
+  }
+  .chart-line {
+    background-color: var(--color-grey-0);
+    border: 1px solid var(--color-grey-100);
+    border-radius: var(--border-radius-md);
+    grid-column: span 2;
+    grid-row: 3/-1;
+  }
+  .chart-bar {
+    background-color: var(--color-grey-0);
+    border: 1px solid var(--color-grey-100);
+    border-radius: var(--border-radius-md);
+  }
+}

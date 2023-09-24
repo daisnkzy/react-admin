@@ -1,0 +1,23 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table {
+  background-color: var(--color-grey-0);
+  border: 1px solid var(--color-grey-50);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  .table-header {
+    display: grid;
+    grid-template-columns: 1.6fr 1.1fr 2fr 1fr 1fr 1.2fr;
+    justify-items: center;
+    column-gap: 2.4rem;
+    align-items: center;
+
+    background-color: var(--color-grey-100);
+    border-bottom: 1px solid var(--color-grey-200);
+    color: var(--color-grey-900);
+    padding: 1.2rem 2.4rem;
+  }
+}
