@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// import CabinForm from '../../features/cabins/cabinForm/cabinForm';
+import CabinForm from '../../features/cabins/cabinForm/CabinForm';
 import CabinTable from '../../features/cabins/cabinTable/CabinTable';
 
 const Cabins = () => {
@@ -15,7 +15,7 @@ const Cabins = () => {
         <button onClick={() => setShowForm(!showForm)}>
           {showForm ? '关闭' : '添加房间'}
         </button>
-        {/* {showForm && <CabinForm />} */}
+        {showForm && <CabinForm />}
       </div>
     </>
   );
